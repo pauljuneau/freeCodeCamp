@@ -1,0 +1,19 @@
+<script>
+
+function repeat(str, num) {
+  var newStr = "";
+  if(num < 0) {
+    str = '';
+  } else {
+    for(i = 0; i < num; i++) {
+      newStr += str;
+    }
+  }
+
+  str = newStr;
+  return str;
+}
+
+console.log(repeat('abc', 3));
+
+</script>
