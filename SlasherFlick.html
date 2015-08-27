@@ -1,0 +1,23 @@
+<script>
+/* Return the remaining elements of an array after chopping off n elements from
+the head.
+*/
+function slasher(arr, howMany) {
+  // it doesn't always pay to be first
+  var test = [];
+
+  if(howMany == 0) {
+    var arr = arr;
+  } else if (howMany > arr.length){
+    var arr = [];
+  } else {
+    for (var i = 0; i < howMany; i++) {
+      arr.shift();
+    }
+  }
+
+  return arr;
+}
+
+console.log(slasher([1, 2, 3], 2));
+</script>
