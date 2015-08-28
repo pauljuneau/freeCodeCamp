@@ -2,9 +2,14 @@
 /*Remove all falsey values from an array.
 Falsey values in javascript are false, null, 0, "", undefined, and NaN.
 */
-function bouncer(arr) {
+function isTrue(value, index, array) {
+  var b1 = new Boolean(value);
+  return b1.valueOf();
+}
 
-  return arr;
+function bouncer(arr) {
+  var result = arr.filter(isTrue);
+  return result;
 }
 
 console.log(bouncer([7, 'ate', '', false, 9]));

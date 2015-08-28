@@ -1,0 +1,21 @@
+<script>
+/*Make a function that looks through an array (first argument) and returns an
+array of all objects that have equivalent property values (second argument).
+*/
+function where(collection, source) {
+  var arr = [];
+
+  for(var myObject in collection){
+      for(var theObject in myArray[myObject]){
+        console.log(myArray[myObject].theObject);
+      }
+  }
+
+  return Object.keys(collection);
+  //return arr;
+}
+
+console.log(where([{ first: 'Romeo', last: 'Montague' }, { first: 'Mercutio', last: null },
+{ first: 'Tybalt', last: 'Capulet' }], { last: 'Capulet' }));
+
+</script>
