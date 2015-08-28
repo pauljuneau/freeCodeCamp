@@ -5,10 +5,10 @@ array of all objects that have equivalent property values (second argument).
 function where(collection, source) {
   var arr = [];
 
-  for(var myObject in collection){
-      for(var theObject in myArray[myObject]){
-        console.log(myArray[myObject].theObject);
-      }
+  for(var keys in collection){
+    for(var names in keys) {
+      console.log(collection[names]);
+    }
   }
 
   return Object.keys(collection);
