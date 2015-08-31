@@ -1,0 +1,24 @@
+<script>
+/*You will be provided with an initial array
+(the first argument in the destroyer function), followed by one or more
+arguments. Remove all elements from the initial array that are of the same
+value as these arguments.
+*/
+function destroyer(arr) {
+  var arg1 = [];
+  arg1.push(arguments[0]);
+
+  var arg2 = [];
+  for (var i = 1; i < arguments.length; i++) {
+    arg2.push(arguments[i]);
+  }
+
+  var filtered = arg1.filter(function (value, index, array) {
+    return array[index] ==  index;
+  });
+  return filtered;
+  //return arr;
+}
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+</script>

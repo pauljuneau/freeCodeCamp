@@ -6,16 +6,22 @@ function where(collection, source) {
   var arr = [];
 
   for(var keys in collection){
-    for(var names in keys) {
-      console.log(collection[names]);
+
+    for(var names in collection[keys]) {
+      if(collection[keys][names] != null){
+        if(source[names] !== undefined){
+          if(collection[keys][names] === source[names]){
+            arr.push(collection[keys]);
+          }
+        }
+      }
     }
   }
 
-  return Object.keys(collection);
-  //return arr;
+  return arr;
 }
 
 console.log(where([{ first: 'Romeo', last: 'Montague' }, { first: 'Mercutio', last: null },
-{ first: 'Tybalt', last: 'Capulet' }], { last: 'Capulet' }));
+{ first: 'Tybalt', last: 'Capulet' }, { first: 'Paul', last: 'Capulet'}], { last: 'Capulet' }));
 
 </script>
