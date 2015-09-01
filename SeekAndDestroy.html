@@ -5,20 +5,14 @@ arguments. Remove all elements from the initial array that are of the same
 value as these arguments.
 */
 function destroyer(arr) {
-  var arg1 = [];
-  arg1.push(arguments[0]);
-
-  var arg2 = [];
-  for (var i = 1; i < arguments.length; i++) {
-    arg2.push(arguments[i]);
+  for (var i=1;i<arguments.length;i++){
+    for (var j=0;j<arr.length;j++){
+	  console.log(arr + ' arr length: ' + arr.length);	
+      if (arr[j]===arguments[i]) arr.splice(j,1);
+    }
   }
-
-  var filtered = arg1.filter(function (value, index, array) {
-    return array[index] ==  index;
-  });
-  return filtered;
-  //return arr;
+  return arr;
 }
 
-console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+console.log(destroyer(['tree', 'hamburger', 53], 'tree', 53));
 </script>
